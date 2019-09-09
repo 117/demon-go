@@ -11,11 +11,11 @@ type Service struct {
 
 // Spawn -
 func (s *Service) Spawn() error {
-	service, err := daemon.New("id goes here", "default demon description")
+	daemon, err := daemon.New("id goes here", "default demon description")
 	if err != nil {
 		return err
 	}
-	if _, err = service.Remove(); err != nil {
+	if _, err = daemon.Remove(); err != nil {
 		return err
 	}
 	return err
