@@ -1,11 +1,12 @@
 package command
 
 import (
-	"fmt"
-	"log"
+	"strings"
 
+	"github.com/117/logger"
+
+	"../service"
 	"github.com/spf13/cobra"
-	"github.com/takama/daemon"
 )
 
 func init() {
@@ -14,15 +15,9 @@ func init() {
 		Short: "Daemonize a command or script.",
 		Long:  "Daemonize a command or script.",
 		Run: func(cmd *cobra.Command, args []string) {
-			service, err := daemon.New("name", "description")
-			if err != nil {
-				log.Fatal("Error: ", err)
+			if err := new(service.Service).Spawn(); err != nil {
+				logger.Log(logger.Fatal, strings.ToLower(err.Error()))
 			}
-			status, err := service.Install()
-			if err != nil {
-				log.Fatal(status, "\nError: ", err)
-			}
-			fmt.Println(status)
 		},
 	})
 }
