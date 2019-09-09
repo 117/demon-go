@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	base.AddCommand(&cobra.Command{
+	GetCommand().AddCommand(&cobra.Command{
 		Use:   "list",
 		Short: "View a list of active daemons.",
 		Long:  "View a list of active daemons.",

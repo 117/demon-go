@@ -1,9 +1,15 @@
 package main
 
 import (
+	"os"
+
 	"./command"
 )
 
 func main() {
-	command.GetBase().Help()
+	if len(os.Args) <= 1 {
+		command.GetBase().Help()
+		return
+	}
+	command.GetBase().Execute()
 }

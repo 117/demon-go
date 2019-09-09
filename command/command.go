@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var base = &cobra.Command{
+var cmd = &cobra.Command{
 	Use:   "demon",
 	Short: "Daemonize and manage scripts or commands.",
 	Long:  "Daemonize and manage scripts or commands.",
@@ -15,7 +15,7 @@ var base = &cobra.Command{
 	},
 }
 
-// GetBase - no description
-func GetBase() *cobra.Command {
-	return base
+// GetCommand - no description
+func GetCommand() *cobra.Command {
+	return cmd
 }
