@@ -1,4 +1,4 @@
-# demon
+# Demon
 
 example desired usage
 
