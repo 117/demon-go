@@ -1,8 +1,8 @@
-# tyrant
+# demon
 
 example desired usage
 
 ```console
-$ tyrant spawn ./executable
+$ demon spawn ./executable
 // creates a forever-running daemon process
 ```
