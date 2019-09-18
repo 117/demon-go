@@ -1,4 +1,4 @@
-# demon
+# Demon
 
 [![godoc](https://godoc.org/github.com/streamwithme/vortex?status.svg)](https://godoc.org/github.com/streamwithme/vortex)
 [![goreportcard](https://goreportcard.com/badge/github.com/streamwithme/vortex)](https://goreportcard.com/badge/github.com/streamwithme/vortex)
