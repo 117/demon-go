@@ -25,12 +25,13 @@ demon
 
 ### Example
 
-Spawn a new demon with a provided command.
+Want to spawn a new demon?
 ```console
 $ demon spawn ping -c 15 example.com
 demon > A new demon has been spawned with PID 64390.
 ```
-That's it, your demon is now running in the background.
+
+Great! the demon is now running in the background.
 ```console
 $ demon list
 PID  	Uptime       	Exec 	Command
