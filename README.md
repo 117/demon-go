@@ -2,31 +2,13 @@
 
 [![godoc](https://godoc.org/github.com/streamwithme/demon?status.svg)](https://godoc.org/github.com/streamwithme/demon)
 [![goreportcard](https://goreportcard.com/badge/github.com/streamwithme/demon)](https://goreportcard.com/report/github.com/streamwithme/demon)
-![version](https://img.shields.io/github/v/release/streamwithme/demon?color=red&include_prereleases)
+![version](https://img.shields.io/github/v/release/streamwithme/demon?color=EF4C4C&include_prereleases)
 
 Run any command or script as a daemon.
 
 ### Install
 
 coming soon
-
-### Usage
-```console
-$ demon
- _____   ______  __    __  ______  __   __    
-/\  __-./\  ___\/\ "-./  \/\  __ \/\ "-.\ \   
-\ \ \/\ \ \  __\\ \ \-./\ \ \ \/\ \ \ \-.  \  
- \ \____-\ \_____\ \_\ \ \_\ \_____\ \_\\"\_\ 
-  \/____/ \/_____/\/_/  \/_/\/_____/\/_/ \/_/ 
-
-Run any command or script as a daemon.
-
-demon
-        help                    show this usage
-        spawn <command(s)>      create a new daemon
-        destroy <pid|regex>     destroy a previously created daemon
-        list <?pid|regex>       ist running daemons
-```
 
 ### Example
 
