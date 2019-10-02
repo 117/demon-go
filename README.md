@@ -5,23 +5,6 @@
 
 Run any command or script as a daemon.
 
-### Usage
-```shell
- _____   ______  __    __  ______  __   __    
-/\  __-./\  ___\/\ "-./  \/\  __ \/\ "-.\ \   
-\ \ \/\ \ \  __\\ \ \-./\ \ \ \/\ \ \ \-.  \  
- \ \____-\ \_____\ \_\ \ \_\ \_____\ \_\\"\_\ 
-  \/____/ \/_____/\/_/  \/_/\/_____/\/_/ \/_/ 
-
-Run any command or script as a daemon.
-
-demon 
-  help - show this usage
-  spawn <command(s)> - create a new daemon
-  destroy <pid|regex> - destroy a previously created daemon
-  list <?pid|regex> - list running daemons
-```
-
 ### Example
 
 ```console
