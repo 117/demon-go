@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 	"os"
+	"regexp"
 	"strings"
 
 	"github.com/117/logger"
-	"github.com/streamwithme/demon/commands"
+	"github.com/mitchellh/go-ps"
+	"github.com/shirou/gopsutil/process"
 )
 
 const usage = ` _____   ______  __    __  ______  __   __    
@@ -23,7 +25,44 @@ demon
 	destroy <pid|regex>	destroy a previously created daemon
 	list <?pid|regex>	ist running daemons
 
-Have a suggestion? (https://github.com/streamwithme/demon/issues).`
+Have a suggestion? (https://github.com/streamwithme/demon/issues)`
+
+// FindMatchingDemons with matching pid or command.
+func FindMatchingDemons(expression string) []*process.Process {
+	var (
+		found   []*process.Process
+		list, _ = ps.Processes()
+	)
+
+	for _, proc := range list {
+		if proc.Pid() == os.Getpid() {
+			continue
+		}
+
+		if strings.Contains(proc.Executable(), "demon") {
+			demon, _ := process.NewProcess(int32(proc.Pid()))
+			found = append(found, demon)
+		}
+	}
+
+	return found
+}
+
+// MatchDemon against pid and command.
+func MatchDemon(proc *process.Process, expression string) bool {
+	// Check if the PID string val matches.
+	if matched, _ := regexp.Match(expression, []byte(fmt.Sprintf("%d", proc.Pid))); matched {
+		return true
+	}
+
+	var command, _ = proc.Cmdline()
+
+	if matched, _ := regexp.Match(expression, []byte(command)); matched {
+		return true
+	}
+
+	return false
+}
 
 func init() {
 	logger.Formatter(func(level logger.Level, message string, vars ...interface{}) string {
@@ -41,23 +80,17 @@ func main() {
 
 	switch strings.ToLower(args[0]) {
 	case "s":
-	case "create":
-	case "new":
-	case "run":
 	case "spawn":
-		commands.Spawn(args[1:]...)
+		Spawn(args[1:]...)
 		return
 	case "d":
-	case "des":
 	case "kill":
 	case "destroy":
-		commands.Destroy(args[1:]...)
+		Destroy(args[1:]...)
 		return
 	case "l":
-	case "info":
-	case "status":
 	case "list":
-		commands.List(args[1:]...)
+		List(args[1:]...)
 		return
 	}
 

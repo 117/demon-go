@@ -1,4 +1,4 @@
-package commands
+package main
 
 import (
 	"strings"
@@ -7,7 +7,6 @@ import (
 	"github.com/dustin/go-humanize"
 	"github.com/mitchellh/go-ps"
 	"github.com/shirou/gopsutil/process"
-	"github.com/streamwithme/demon/helpers"
 
 	tables "github.com/tatsushid/go-prettytable"
 )
@@ -23,7 +22,7 @@ func List(args ...string) {
 		expression = args[0]
 	}
 
-	for _, demon := range helpers.FindMatchingDemons(expression) {
+	for _, demon := range FindMatchingDemons(expression) {
 		var (
 			demons     = []*process.Process{}
 			cmd, _     = demon.CmdlineSlice()
@@ -33,7 +32,7 @@ func List(args ...string) {
 
 		switch len(args) > 1 {
 		case true:
-			if helpers.MatchDemon(demon, expression) {
+			if MatchDemon(demon, expression) {
 				demons = append(demons, demon)
 			}
 		case false:

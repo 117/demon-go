@@ -1,8 +1,7 @@
-package commands
+package main
 
 import (
 	"github.com/117/logger"
-	"github.com/streamwithme/demon/helpers"
 )
 
 // Destroy let's you kill daemons with regex matching.
@@ -21,8 +20,8 @@ func Destroy(args ...string) {
 		expression = args[0]
 	}
 
-	for _, demon := range helpers.FindMatchingDemons(expression) {
-		if helpers.MatchDemon(demon, expression) {
+	for _, demon := range FindMatchingDemons(expression) {
+		if MatchDemon(demon, expression) {
 			demon.Kill()
 			killed++
 		}
