@@ -2,7 +2,7 @@
 
 [![godoc](https://godoc.org/github.com/streamwithme/demon?status.svg)](https://godoc.org/github.com/streamwithme/demon)
 [![goreportcard](https://goreportcard.com/badge/github.com/streamwithme/demon)](https://goreportcard.com/report/github.com/streamwithme/demon)
-![version](https://img.shields.io/github/v/release/streamwithme/demon?color=red&include_prereleases)
+![version](https://img.shields.io/github/v/release/streamwithme/demon?color=EB2C2C&include_prereleases)
 
 Run any command or script as a daemon.
 
