@@ -82,7 +82,6 @@ func main() {
 	args := os.Args[1:]
 
 	if len(args) < 1 {
-		logger.Log(logger.Info, "usage")
 		fmt.Println(usage)
 		return
 	}
@@ -117,8 +116,10 @@ func main() {
 			return
 		}
 
-		parts := strings.Split(dargs[0], " ")
-		cmd := exec.Command(parts[0], parts[1:]...)
+		var (
+			parts = strings.Split(dargs[0], " ")
+			cmd   = exec.Command(parts[0], parts[1:]...)
+		)
 
 		cmd.Run()
 		return
@@ -140,7 +141,6 @@ func main() {
 		logger.Logf(logger.Info, "Found and destroyed %d demon(s).", killed)
 		return
 	case "list":
-		logger.Logf(logger.Info, "list")
 		table, _ := tables.NewTable(
 			[]tables.Column{
 				{Header: "PID"},
@@ -182,6 +182,5 @@ func main() {
 		return
 	}
 
-	logger.Log(logger.Info, "usage")
 	fmt.Println(usage)
 }
