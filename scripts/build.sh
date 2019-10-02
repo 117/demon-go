@@ -6,8 +6,8 @@ then
 else
     rm -rf $repo/../builds
     mkdir $repo/../builds
-    GOOS=linux GOARCH=amd64 go build -o $repo/../builds/demon-linux-$1 ../main.go
-    GOOS=darwin GOARCH=amd64 go build -o $repo/../builds/demon-darwin-$1 ../main.go
+    GOOS=linux GOARCH=amd64 go build -o $repo/../builds/demon-linux-$1 $repo/../main.go
+    GOOS=darwin GOARCH=amd64 go build -o $repo/../builds/demon-darwin-$1 $repo/../main.go
 fi
 
 
