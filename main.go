@@ -27,12 +27,6 @@ demon
 For issues https://github.com/streamwithme/demon.`
 )
 
-var demonCommands = map[string]func(...string){
-	"spawn":   commands.Spawn,
-	"destroy": commands.Destroy,
-	"list":    commands.List,
-}
-
 func init() {
 	logger.Formatter(func(level logger.Level, message string, vars ...interface{}) string {
 		return fmt.Sprintf("demon > %s", fmt.Sprintf(message, vars...))
@@ -43,7 +37,11 @@ func main() {
 	args := os.Args[1:]
 
 	if len(args) > 0 {
-		for name, f := range demonCommands {
+		for name, f := range map[string]func(...string){
+			"spawn":   commands.Spawn,
+			"destroy": commands.Destroy,
+			"list":    commands.List,
+		} {
 			if strings.EqualFold(name, args[0]) {
 				f(args[1:]...)
 				return
