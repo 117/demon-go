@@ -10,7 +10,7 @@ import (
 
 // Spawn creates a new daemon with the provided command.
 func Spawn(args ...string) {
-	if len(args) < 2 {
+	if len(args) < 1 {
 		logger.Log(logger.Err, "No command or script provided.")
 		return
 	}

@@ -7,7 +7,7 @@ import (
 
 // Destroy let's you kill daemons with regex matching.
 func Destroy(args ...string) {
-	if len(args) < 2 {
+	if len(args) < 1 {
 		logger.Log(logger.Err, "No expression or PID was provided.")
 		return
 	}
