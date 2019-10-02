@@ -1,26 +1,9 @@
 # Demon
 
-[![godoc](https://godoc.org/github.com/streamwithme/vortex?status.svg)](https://godoc.org/github.com/streamwithme/vortex)
-[![goreportcard](https://goreportcard.com/badge/github.com/streamwithme/vortex)](https://goreportcard.com/badge/github.com/streamwithme/vortex)
+[![godoc](https://godoc.org/github.com/streamwithme/demon?status.svg)](https://godoc.org/github.com/streamwithme/demon)
+[![goreportcard](https://goreportcard.com/badge/github.com/streamwithme/demon)](https://goreportcard.com/demon)
 
 Run any command or script as a daemon.
-
-### Usage
-```shell
- _____   ______  __    __  ______  __   __    
-/\  __-./\  ___\/\ "-./  \/\  __ \/\ "-.\ \   
-\ \ \/\ \ \  __\\ \ \-./\ \ \ \/\ \ \ \-.  \  
- \ \____-\ \_____\ \_\ \ \_\ \_____\ \_\\"\_\ 
-  \/____/ \/_____/\/_/  \/_/\/_____/\/_/ \/_/ 
-
-Run any command or script as a daemon.
-
-demon 
-  help - show this usage
-  spawn <command(s)> - create a new daemon
-  destroy <pid|regex> - destroy a previously created daemon
-  list <?pid|regex> - list running daemons
-```
 
 ### Example
 
