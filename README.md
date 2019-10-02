@@ -6,6 +6,10 @@
 
 Run any command or script as a daemon.
 
+### Install
+
+coming soon
+
 ### Usage
 ```txt
 $ demon help
