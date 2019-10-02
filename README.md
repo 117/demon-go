@@ -11,8 +11,8 @@ Run any command or script as a daemon.
 coming soon
 
 ### Usage
-```txt
-$ demon help
+```console
+$ demon
  _____   ______  __    __  ______  __   __    
 /\  __-./\  ___\/\ "-./  \/\  __ \/\ "-.\ \   
 \ \ \/\ \ \  __\\ \ \-./\ \ \ \/\ \ \ \-.  \  
