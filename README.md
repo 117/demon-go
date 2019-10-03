@@ -37,7 +37,7 @@ demon spawn <command(s)>        create a new daemon
 demon destroy <pid|regex>       destroy a previously created daemon
 ```
 
-### Example
+## Example
 
 Use the spawn command to daemonize a script or executable.
 
@@ -54,6 +54,6 @@ PID  	Uptime       	Exec 	Command
 64390	2 seconds ago	demon	./my-executable
 ```
 
-### Contributing
+## Contributing
 
 Pull requests are encouraged.
