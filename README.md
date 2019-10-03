@@ -5,26 +5,53 @@
 
 Run any command or script as a daemon.
 
-### Install
+## Install
 
-On linux systems:
+On Linux:
 
 ```console
-$ wget https://github.com/streamwithme/demon/releases/download/v0.0.9/demon-linux-v0.0.9
-$ chmod +x demon-linux-v0.0.9
-$ mv demon-linux-v0.0.9 /usr/bin/demon
+$ wget https://github.com/streamwithme/demon/releases/download/v1.0.0/demon-linux-v1.0.0
+$ chmod +x demon-linux-v1.0.0 && sudo mv demon-linux-v1.0.0 /usr/bin/demon
+```
+
+On Darwin (macOS):
+
+```console
+$ wget https://github.com/streamwithme/demon/releases/download/v1.0.0/demon-darwin-v1.0.0
+$ chmod +x demon-darwin-v1.0.0 && sudo mv demon-darwin-v1.0.0 /usr/bin/demon
+```
+
+## Usage
+
+```txt
+ _____   ______  __    __  ______  __   __    
+/\  __-./\  ___\/\ "-./  \/\  __ \/\ "-.\ \   
+\ \ \/\ \ \  __\\ \ \-./\ \ \ \/\ \ \ \-.  \  
+ \ \____-\ \_____\ \_\ \ \_\ \_____\ \_\\"\_\ 
+  \/____/ \/_____/\/_/  \/_/\/_____/\/_/ \/_/ 
+
+Run any command or script as a daemon.
+
+demon help                      show this usage
+demon spawn <command(s)>        create a new daemon
+demon destroy <pid|regex>       destroy a previously created daemon
 ```
 
 ### Example
 
-Want to run a command or script as a daemon?
+Use the spawn command to daemonize a script or executable.
 
 ```console
-$ demon spawn ping -c 15 example.com
-demon > A new demon has been spawned with PID 64390.
+$ demon spawn ./my-executable
+A new demon has been spawned with PID 12345.
+```
+
+View running daemons with the list command.
+
+```console
 $ demon list
 PID  	Uptime       	Exec 	Command
-64390	2 seconds ago	demon	ping -c 15 example.com
+64390	2 seconds ago	demon	./my-executable
 ```
 
 ### Contributing
