@@ -10,7 +10,7 @@ Run any command or script as a daemon.
 On Linux:
 
 ```console
-wget -o demon https://github.com/117/demon/releases/download/v1.1.0/demon-linux-v1.1.0 && chmod +x demon && sudo mv demon /usr/bin/demon
+wget -o demon https://github.com/117/demon/releases/download/v1.1.0/demon-linux_v1.1.0 && chmod +x demon && sudo mv demon /usr/bin/demon
 ```
 
 ## Example
