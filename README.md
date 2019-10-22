@@ -16,7 +16,7 @@ wget https://github.com/117/demon/releases/download/v1.1.0/demon-linux-v1.1.0 &&
 On MacOS (darwin):
 
 ```console
-wget https://github.com/117/demon/releases/download/v1.1.0/demon-darwin-v1.1.0 && chmod +x demon-darwin_v1.1.0 && sudo mv demon-darwin-v1.1.0 /usr/local/bin/
+wget https://github.com/117/demon/releases/download/v1.1.0/demon-darwin-v1.1.0 && chmod +x demon-darwin-v1.1.0 && sudo mv demon-darwin-v1.1.0 /usr/local/bin/
 ```
 
 ## Example
