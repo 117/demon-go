@@ -10,13 +10,13 @@ Run any command or script as a daemon.
 On Linux:
 
 ```console
-wget https://github.com/117/demon/releases/download/v1.1.0/demon-linux-v1.1.0 && chmod +x demon-linux-v1.1.0 && sudo mv demon-linux-v1.1.0 /usr/bin/demon
+wget -o demon https://github.com/117/demon/releases/download/v1.1.0/demon-linux-v1.1.0 && chmod +x demon && sudo mv demon /usr/bin/demon
 ```
 
 On Darwin (macOS):
 
 ```console
-wget https://github.com/117/demon/releases/download/v1.1.0/demon-darwin-v1.1.0 && chmod +x demon-darwin-v1.1.0 && sudo mv demon-darwin-v1.1.0 /usr/local/bin/demon
+wget -o demon https://github.com/117/demon/releases/download/v1.1.0/demon-linux-v1.1.0 && chmod +x demon && sudo mv demon /usr/bin/demon
 ```
 
 ## Example
