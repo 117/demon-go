@@ -32,10 +32,10 @@ chmod +x $EXECUTABLE
 
 case $OS in
 darwin)
-    mv $EXECUTABLE /usr/local/bin/demon
+    sudo mv $EXECUTABLE /usr/local/bin/demon
     ;;
 linux)
-    mv $EXECUTABLE /usr/bin/demon
+    sudo mv $EXECUTABLE /usr/bin/demon
     ;;
 esac
 
