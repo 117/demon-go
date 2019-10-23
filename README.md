@@ -1,4 +1,4 @@
-# demon
+# demon 😈
 
 [![godoc](https://godoc.org/github.com/117/demon?status.svg)](https://godoc.org/github.com/117/demon)
 [![goreportcard](https://goreportcard.com/badge/github.com/117/demon)](https://goreportcard.com/report/github.com/117/demon)
