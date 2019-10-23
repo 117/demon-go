@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REPO="117/demon"
+REPO="streamwithme/demon"
 OS="$(tr [A-Z] [a-z] <<<$(uname))"
 TAG=$(curl --silent "https://api.github.com/repos/$REPO/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 EXECUTABLE="demon-$OS-$TAG"
@@ -9,7 +9,7 @@ if [ $OS != "darwin" || $OS != "linux" ]; then
     exit "Sorry your operating system is not supported."
 fi
 
-echo "--- (117/demon) Release Snapshot ---"
+echo "--- ($REPO) Release Snapshot ---"
 echo "os            $OS"
 echo "tag           $TAG"
 echo "executable    $EXECUTABLE"

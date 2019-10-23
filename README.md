@@ -1,14 +1,14 @@
 # demon
 
-[![godoc](https://godoc.org/github.com/117/demon?status.svg)](https://godoc.org/github.com/117/demon)
-[![goreportcard](https://goreportcard.com/badge/github.com/117/demon)](https://goreportcard.com/report/github.com/117/demon)
+[![godoc](https://godoc.org/github.com/streamwithme/demon?status.svg)](https://godoc.org/github.com/streamwithme/demon)
+[![goreportcard](https://goreportcard.com/badge/github.com/streamwithme/demon)](https://goreportcard.com/report/github.com/streamwithme/demon)
 
 ## Install
 
 From console:
 
 ```console
-bash <(curl -s https://raw.githubusercontent.com/117/demon/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/streamwithme/demon/master/install.sh)
 ```
 
 ## Example
