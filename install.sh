@@ -35,7 +35,7 @@ darwin)
     sudo mv $EXECUTABLE /usr/local/bin/demon
     ;;
 linux)
-    sudo mv $EXECUTABLE /usr/bin/demon
+    sudo mv $EXECUTABLE /bin/demon
     ;;
 esac
 
