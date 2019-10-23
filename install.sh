@@ -27,3 +27,16 @@ curl -s https://api.github.com/repos/$REPO/releases/latest |
     cut -d : -f 2,3 |
     tr -d \" |
     wget -qi -
+
+chmod +x $EXECUTABLE
+
+case $OS in
+darwin)
+    mv $EXECUTABLE /usr/local/bin/demon
+    ;;
+linux)
+    mv $EXECUTABLE /usr/bin/demon
+    ;;
+esac
+
+echo "Done! You can now use the \"demon\" command."
