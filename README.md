@@ -3,9 +3,6 @@
 [![godoc](https://godoc.org/github.com/117/demon?status.svg)](https://godoc.org/github.com/117/demon)
 [![goreportcard](https://goreportcard.com/badge/github.com/117/demon)](https://goreportcard.com/report/github.com/117/demon)
 
-
-<img src="screenshot.png" width="75%" height="75%">
-
 ## Install
 
 From console:
@@ -13,6 +10,9 @@ From console:
 ```console
 bash <(curl -s https://raw.githubusercontent.com/117/demon/master/install.sh)
 ```
+## Usage
+
+<img src="screenshot.png" width="75%" height="75%">
 
 ## Example
 
