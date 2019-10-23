@@ -124,7 +124,7 @@ func kill() {
 
 func list() {
 	var (
-		expression = "*"
+		expression = "."
 		table, _   = tables.NewTable([]tables.Column{{Header: "PID"}, {Header: "Uptime"}, {Header: "Exec"}, {Header: "Command"}}...)
 	)
 
