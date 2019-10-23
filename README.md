@@ -13,6 +13,12 @@ From console:
 bash <(curl -s https://raw.githubusercontent.com/117/demon/master/install.sh)
 ```
 
+## Usage
+
+<img src="screenshot.png" width="75%" height="75%">
+
+
+
 ## Example
 
 Use the spawn command to daemonize a script or executable.
