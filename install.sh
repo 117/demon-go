@@ -3,6 +3,7 @@
 REPO="117/demon"
 OS="$(tr [A-Z] [a-z] <<<$(uname))"
 TAG=$(curl --silent "https://api.github.com/repos/$REPO/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+EXECUTABLE="demon-$OS-$TAG"
 
 if [[ $UNAME == CYGWIN* || $UNAME == MINGW* ]]; then
     exit "Sorry your operating system is not supported."
@@ -11,9 +12,6 @@ fi
 echo "--- (117/demon) Release Snapshot ---"
 echo "os            $OS"
 echo "tag           $TAG"
-
-EXECUTABLE="demon-$OS-$TAG"
-
 echo "executable    $EXECUTABLE"
 
 RELEASE_ASSET="https://github.com/$REPO/releases/download/$TAG/$EXECUTABLE"
