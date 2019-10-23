@@ -7,16 +7,10 @@ Run any command or script as a daemon.
 
 ## Install
 
-On Linux:
+From console:
 
 ```console
-wget https://github.com/117/demon/releases/download/v1.1.0/demon-linux-v1.1.0 && chmod +x demon-linux-v1.1.0 && sudo mv demon-linux-v1.1.0 /usr/bin/
-```
-
-On MacOS (darwin):
-
-```console
-wget https://github.com/117/demon/releases/download/v1.1.0/demon-darwin-v1.1.0 && chmod +x demon-darwin-v1.1.0 && sudo mv demon-darwin-v1.1.0 /usr/local/bin/
+bash <(curl -s https://raw.githubusercontent.com/117/demon/master/install.sh)
 ```
 
 ## Example
