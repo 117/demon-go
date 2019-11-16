@@ -1,4 +1,4 @@
-module github.com/streamwithme/demon
+module github.com/117/demon
 
 go 1.13
 
