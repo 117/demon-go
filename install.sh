@@ -1,6 +1,6 @@
 #!/bin/sh
 
-REPO="streamwithme/demon"
+REPO="117/demon"
 OS="$(tr [A-Z] [a-z] <<<$(uname))"
 TAG=$(curl --silent "https://api.github.com/repos/$REPO/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 EXECUTABLE="demon-$OS-$TAG"
