@@ -31,7 +31,7 @@ demon kill <pid|regex>		kill a previously created daemon
 demon list <?pid|regex>		list running daemons
 
 Have a suggestion or want to report a bug?
-https://github.com/streamwithme/demon/issues`
+https://github.com/117/demon/issues`
 
 var args = os.Args[1:]
 
